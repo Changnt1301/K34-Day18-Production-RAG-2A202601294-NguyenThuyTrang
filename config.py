@@ -9,6 +9,10 @@ load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 
 # --- Qdrant ---
+# Local (Docker): để trống QDRANT_URL, dùng QDRANT_HOST/QDRANT_PORT.
+# Qdrant Cloud: set QDRANT_URL + QDRANT_API_KEY trong .env (ưu tiên hơn host/port).
+QDRANT_URL = os.getenv("QDRANT_URL", "")
+QDRANT_API_KEY = os.getenv("QDRANT_API_KEY", "")
 QDRANT_HOST = "localhost"
 QDRANT_PORT = 6333
 COLLECTION_NAME = "lab18_production"
